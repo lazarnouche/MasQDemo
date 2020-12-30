@@ -13,28 +13,28 @@ import ARKit
 import ARVideoKit
 
 class MaskViewController: UIViewController, ARSCNViewDelegate {
-
+    
     
     var recorder: RecordAR?
     var analysis = ""
     var togglePhoto = true
     var maskNode = SCNReferenceNode()
-
+    
     @IBOutlet var sceneView: ARSCNView!
     @IBOutlet weak var photoButton: UIButton!
     @IBOutlet var shutterView: UIView!
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         navigationItem.title = ""
         sceneView.delegate = self
         guard ARFaceTrackingConfiguration.isSupported else { return }
         print(ARFaceTrackingConfiguration.supportedVideoFormats)
         // Initialize with SpriteKit scene
         recorder = RecordAR(ARSceneKit: sceneView)
-         
+        
         // Specifiy supported orientations
         recorder?.inputViewOrientations = [.portrait, .landscapeLeft, .landscapeRight]
         createMask()
@@ -44,9 +44,9 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
     
     
     func createMask(){
-
-            
-
+        
+        
+        
         let targetUrl = maskOptions.currentIndex()
         maskNode = SCNReferenceNode(url: targetUrl)!
         maskNode.load()
@@ -55,13 +55,13 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
         maskNode.light!.type = .directional
         maskNode.light!.castsShadow = true
         maskNode.light?.shadowMode = .deferred
-
         
-    
+        
+        
     }
     
     @objc func image(_ image: UIImage, didFinishSavingWithError error: Error?, contextInfo: UnsafeRawPointer) {
-
+        
         if let error = error {
             print("Error Saving ARKit Scene \(error)")
         } else {
@@ -83,20 +83,19 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
             self.shutterView.alpha = 0.0
         } completion: { (finished) in
             self.shutterView.isHidden = false
-
+            
             
             MaskApi.imagewithMask = self.sceneView.snapshot()
-
+            
             self.sceneView.scene.rootNode.enumerateChildNodes { (faceNode, _) in
-            if let faceNodeName = faceNode.name{
-                if faceNodeName == "face"{
-                    faceNode.geometry!.firstMaterial?.transparency = 0
-                    self.maskNode.removeFromParentNode()
-//                    self.togglePhoto = !self.togglePhoto
-                    
+                if let faceNodeName = faceNode.name{
+                    if faceNodeName == "face"{
+                        faceNode.geometry!.firstMaterial?.transparency = 0
+                        self.maskNode.removeFromParentNode()
+                        
+                    }
                 }
             }
-        }
             MaskApi.imagewitouthMask = self.sceneView.snapshot()
             self.navigationController?.popViewController(animated: true)
             NotificationCenter.default.post(name: Notification.Name(rawValue: "updateAvatarImage"), object: nil)
@@ -108,13 +107,13 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
     @IBAction func gifAction(_ sender: UIButton) {
         
         takePhoto()
-
+        
         
     }
     
     @IBAction func faceAction(_ sender: UIButton) {
         
-
+        
         sceneView.scene.rootNode.enumerateChildNodes { (faceNode, _) in
             if let faceNodeName = faceNode.name{
                 if faceNodeName == "face"{
@@ -122,9 +121,9 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
                     textureOptions.next()
                     faceNode.geometry?.firstMaterial?.diffuse.contents =
                         UIImage(named: textureOptions.currentIndex().absoluteString)
-
+                    
                     self.maskNode.removeFromParentNode()
-
+                    
                 }
             }
         }
@@ -137,18 +136,18 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
         
         maskOptions.next()
         self.createMask()
-
+        
         sceneView.scene.rootNode.enumerateChildNodes { (faceNode, _) in
             if let faceNodeName = faceNode.name{
                 if faceNodeName == "face"{
                     self.addNodeToFaceNode(facenode: faceNode, masknode: maskNode)
-
+                    
                     
                 }
             }
         }
-
-  
+        
+        
     }
     
     func addNodeToFaceNode(facenode faceNode: SCNNode, masknode maskNode: SCNNode){
@@ -170,7 +169,7 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
         // Pause the view's session
         sceneView.session.pause()
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         print("viewWillAppear")
@@ -189,70 +188,53 @@ class MaskViewController: UIViewController, ARSCNViewDelegate {
         let faceNode = SCNNode(geometry: faceGeometry)
         faceNode.name = "face"
         addNodeToFaceNode(facenode: faceNode, masknode: maskNode)
-//        faceNode.geometry!.firstMaterial?.fillMode = .lines
         
         return faceNode
-
-
+        
+        
     }
     
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-
+        
     }
-
+    
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         
         guard let faceGeometry = node.geometry as? ARSCNFaceGeometry,
-            let faceAnchor = anchor as? ARFaceAnchor
-            else { return }
+              let faceAnchor = anchor as? ARFaceAnchor
+        else { return }
         
         faceGeometry.update(from: faceAnchor.geometry)
         expression(anchor: faceAnchor)
-           
-           DispatchQueue.main.async {
+        
+        DispatchQueue.main.async {
             self.navigationItem.title = self.analysis
-           }
-
-//    var morphs: [SCNGeometry] = []
-//    let morpher = SCNMorpher()
-//        DispatchQueue.main.async {
-//            let blendShapes = faceAnchor.blendShapes
-//
-//
-//            // This will only work correctly if the shape keys are given the exact same name as the blendshape names
-//            for (key, value) in blendShapes {
-//                if let fValue = value as? Float{
-//                    print(value)
-//                    self.contentNode?.childNodes[0].morpher?.setWeight(CGFloat(fValue), forTargetNamed: key.rawValue)
-//                }
-//            }
-    
-//    }
-    
+        }
+        
     }
     
     func expression(anchor: ARFaceAnchor) {
         // 1
         let smileLeft = anchor.blendShapes[.mouthSmileLeft]
         let smileRight = anchor.blendShapes[.mouthSmileRight]
-//        let cheekPuff = anchor.blendShapes[.cheekPuff]
-//        let tongue = anchor.blendShapes[.tongueOut]
+        //        let cheekPuff = anchor.blendShapes[.cheekPuff]
+        //        let tongue = anchor.blendShapes[.tongueOut]
         self.analysis = ""
-     
+        
         // 2
         if ((smileLeft?.decimalValue ?? 0.0) + (smileRight?.decimalValue ?? 0.0)) > 0.9 {
             self.analysis += ""
         }else{
             self.analysis += "You have to smile! "
         }
-     
-//        if cheekPuff?.decimalValue ?? 0.0 > 0.1 {
-//            self.analysis += "Your cheeks are puffed. "
-//        }
-//
-//        if tongue?.decimalValue ?? 0.0 > 0.1 {
-//            self.analysis += "Don't stick your tongue out! "
-//        }
+        
+        //        if cheekPuff?.decimalValue ?? 0.0 > 0.1 {
+        //            self.analysis += "Your cheeks are puffed. "
+        //        }
+        //
+        //        if tongue?.decimalValue ?? 0.0 > 0.1 {
+        //            self.analysis += "Don't stick your tongue out! "
+        //        }
     }
     
 }
