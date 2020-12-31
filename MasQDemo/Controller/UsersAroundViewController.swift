@@ -85,9 +85,11 @@ class UsersAroundViewController: UIViewController {
         self.users.removeAll()
         
         myQuery = geoFire.query(at: location, withRadius: distance)
-        
-        queryHandle = myQuery.observe(GFEventType.keyEntered) { (key, location) in
-          
+//        myQuery.observe(.keyEntered, with: { (key, location) in
+//            print(key)
+//        })
+        queryHandle = myQuery.observe(.keyEntered, with:  { (key, location) in
+
             if key != Api.User.currentUserId {
                 Api.User.getUserInforSingleEvent(uid: key, onSuccess: { (user) in
                     if self.users.contains(user) {
@@ -113,7 +115,7 @@ class UsersAroundViewController: UIViewController {
                     self.collectionView.reloadData()
                 })
             }
-        }
+        })
     }
     
     @IBAction func mapButtonTapped(_ sender: Any) {

@@ -6,15 +6,15 @@ target 'MasQDemo' do
   use_frameworks!
 
   # Pods for MasQDemo
-  pod 'Firebase/Core'
+  pod 'Firebase/Analytics'
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
   pod 'SDWebImage'
   pod 'GeoFire'
-  pod 'FBSDKLoginKit'
-  pod 'GoogleSignIn'
+  pod 'FBSDKLoginKit','6.0.0'
+  pod 'GoogleSignIn', '< 5.0.0'
   pod 'ARVideoKit'
   pod 'ZIPFoundation'
   pod 'ProgressHUD', :git => 'https://github.com/relatedcode/ProgressHUD.git', :commit => '83c3801e9aa69be157a47c40cdd8702bfaf29213'

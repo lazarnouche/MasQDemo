@@ -75,34 +75,35 @@ extension SignUpViewController{
         let sourceDirectory = URL.init(fileURLWithPath: paths, isDirectory: true)
         
         
-//        ref.listAll { (result, error) in
-//            if let error = error{
-//                print(error)
-//            }
-//            print("result result \(result)")
-//            for item in result.items{
-//                print("item itm \(item)")
-//                item.downloadURL { (dataURL, error) in
-//                    if error != nil {
-//                        print(error!.localizedDescription)
-//                        return
-//                    }
-//                    if let url = dataURL {
-//                        let fileUrl = sourceDirectory.appendingPathComponent("Data/\(url.lastPathComponent)")
-//                        let masknameurl = (url.lastPathComponent as NSString).deletingPathExtension
-//                        let targetUrl = sourceDirectory.appendingPathComponent("Data/\(masknameurl)")
-//                        if url.pathExtension == "zip"{
-//                                
-//                            self._downloadMasks(from: item, folderUrl: targetUrl, fileUrl: fileUrl)
-//                                        
-//                        }
-//       
-//                    }
-//                    
-//                }
-//            }
-//            
-//        }
+        
+        ref.listAll { (result, error) in
+            if let error = error{
+                print(error)
+            }
+            print("result result \(result)")
+            for item in result.items{
+                print("item itm \(item)")
+                item.downloadURL { (dataURL, error) in
+                    if error != nil {
+                        print(error!.localizedDescription)
+                        return
+                    }
+                    if let url = dataURL {
+                        let fileUrl = sourceDirectory.appendingPathComponent("Data/\(url.lastPathComponent)")
+                        let masknameurl = (url.lastPathComponent as NSString).deletingPathExtension
+                        let targetUrl = sourceDirectory.appendingPathComponent("Data/\(masknameurl)")
+                        if url.pathExtension == "zip"{
+                                
+                            self._downloadMasks(from: item, folderUrl: targetUrl, fileUrl: fileUrl)
+                                        
+                        }
+       
+                    }
+                    
+                }
+            }
+            
+        }
 
 
        

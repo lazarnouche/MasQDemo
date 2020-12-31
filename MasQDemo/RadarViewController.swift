@@ -316,7 +316,7 @@ class RadarViewController: UIViewController {
         
         myQuery = geoFire.query(at: location, withRadius: distance)
         
-        queryHandle = myQuery.observe(GFEventType.keyEntered) { (key, location) in
+        queryHandle = myQuery.observe(.keyEntered, with: { (key, location) in
             
             if key != Api.User.currentUserId {
                 Api.User.getUserInforSingleEvent(uid: key, onSuccess: { (user) in
@@ -331,7 +331,7 @@ class RadarViewController: UIViewController {
                     print(user.username)
                 })
             }
-        }
+        })
     }
     
 }
