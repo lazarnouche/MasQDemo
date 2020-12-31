@@ -11,11 +11,11 @@ target 'MasQDemo' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Messaging'
-  pod 'ProgressHUD'
   pod 'SDWebImage'
   pod 'GeoFire'
   pod 'FBSDKLoginKit'
   pod 'GoogleSignIn'
   pod 'ARVideoKit'
   pod 'ZIPFoundation'
+  pod 'ProgressHUD', :git => 'https://github.com/relatedcode/ProgressHUD.git', :commit => '83c3801e9aa69be157a47c40cdd8702bfaf29213'
 end
