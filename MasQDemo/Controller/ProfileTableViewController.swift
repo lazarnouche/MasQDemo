@@ -40,14 +40,14 @@ class ProfileTableViewController: UITableViewController {
         avatar.addGestureRecognizer(tapGesture)
     }
     
-    @objc func presentPicker() {
-        view.endEditing(true)
-        let picker = UIImagePickerController()
-        picker.sourceType = .photoLibrary
-        picker.allowsEditing = true
-        picker.delegate = self
-        self.present(picker, animated: true, completion: nil)
-    }
+//    @objc func presentPicker() {
+//        view.endEditing(true)
+//        let picker = UIImagePickerController()
+//        picker.sourceType = .photoLibrary
+//        picker.allowsEditing = true
+//        picker.delegate = self
+//        self.present(picker, animated: true, completion: nil)
+//    }
     
     func observeData() {
         Api.User.getUserInforSingleEvent(uid: Api.User.currentUserId) { (user) in

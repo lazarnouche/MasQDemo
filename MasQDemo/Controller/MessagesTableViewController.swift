@@ -26,6 +26,7 @@ class MessagesTableViewController: UITableViewController {
         
         let iconView = UIImageView(image: UIImage(named: "icon_top"))
         iconView.contentMode = .scaleAspectFit
+        iconView.isHidden = true
         navigationItem.titleView = iconView
         
         let containView = UIView(frame: CGRect(x: 0, y: 0, width: 36, height: 36))
