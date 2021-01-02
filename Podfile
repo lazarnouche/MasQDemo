@@ -18,4 +18,6 @@ target 'MasQDemo' do
   pod 'ARVideoKit'
   pod 'ZIPFoundation'
   pod 'ProgressHUD', :git => 'https://github.com/relatedcode/ProgressHUD.git', :commit => '83c3801e9aa69be157a47c40cdd8702bfaf29213'
+  pod 'RealmSwift'
+
 end

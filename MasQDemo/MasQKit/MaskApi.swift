@@ -16,7 +16,7 @@ struct MaskApi{
         didSet{
             
             maskOptions.updateRemoteMask(remoteurl: MaskApi.maskRemoteURL?.last)
-            print("+++++++++++++++++ \(maskOptions.masks)+++++++++++++++++++++++++")
+            print("++++++++++++++++++++++++++++++++++++++++++")
 
         }
 

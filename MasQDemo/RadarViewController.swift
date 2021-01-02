@@ -280,22 +280,22 @@ class RadarViewController: UIViewController {
     
     
     func setupTransforms() {
-        for (i, card) in cards.enumerated() {
-            if i == 0 { continue; }
-            
-            if i > 3 { return }
-            
-            var transform = CGAffineTransform.identity
-            if i % 2 == 0 {
-                transform = transform.translatedBy(x: CGFloat(i)*4, y: 0)
-                transform = transform.rotated(by: CGFloat(Double.pi)/150*CGFloat(i))
-            } else {
-                transform = transform.translatedBy(x: -CGFloat(i)*4, y: 0)
-                transform = transform.rotated(by: -CGFloat(Double.pi)/150*CGFloat(i))
-            }
-            
-            card.transform = transform
-        }
+//        for (i, card) in cards.enumerated() {
+//            if i == 0 { continue; }
+//            
+//            if i > 3 { return }
+//            
+//            var transform = CGAffineTransform.identity
+//            if i % 2 == 0 {
+//                transform = transform.translatedBy(x: CGFloat(i)*4, y: 0)
+//                transform = transform.rotated(by: CGFloat(Double.pi)/150*CGFloat(i))
+//            } else {
+//                transform = transform.translatedBy(x: -CGFloat(i)*4, y: 0)
+//                transform = transform.rotated(by: -CGFloat(Double.pi)/150*CGFloat(i))
+//            }
+//            
+//            card.transform = transform
+//        }
     }
     
     
@@ -329,6 +329,7 @@ class RadarViewController: UIViewController {
                     self.users.append(user)
                     self.setupCard(user: user)
                     print(user.username)
+                    print(user.isMale)
                 })
             }
         })

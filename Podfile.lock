@@ -130,6 +130,11 @@ PODS:
   - ProgressHUD (2.51)
   - PromisesObjC (1.2.11)
   - Protobuf (3.13.0)
+  - Realm (10.1.4):
+    - Realm/Headers (= 10.1.4)
+  - Realm/Headers (10.1.4)
+  - RealmSwift (10.1.4):
+    - Realm (= 10.1.4)
   - SDWebImage (5.10.0):
     - SDWebImage/Core (= 5.10.0)
   - SDWebImage/Core (5.10.0)
@@ -146,6 +151,7 @@ DEPENDENCIES:
   - GeoFire
   - GoogleSignIn (< 5.0.0)
   - ProgressHUD (from `https://github.com/relatedcode/ProgressHUD.git`, commit `83c3801e9aa69be157a47c40cdd8702bfaf29213`)
+  - RealmSwift
   - SDWebImage
   - ZIPFoundation
 
@@ -175,6 +181,8 @@ SPEC REPOS:
     - nanopb
     - PromisesObjC
     - Protobuf
+    - Realm
+    - RealmSwift
     - SDWebImage
     - ZIPFoundation
 
@@ -214,9 +222,11 @@ SPEC CHECKSUMS:
   ProgressHUD: 54b4c2fa202bf3da7dddc1c698ae4e6376333bd9
   PromisesObjC: 8c196f5a328c2cba3e74624585467a557dcb482f
   Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
+  Realm: 80f4fb2971ccb9adc27a47d0955ae8e533a7030b
+  RealmSwift: 0e566ca714edb377bba8ea0811eafcea0b93734e
   SDWebImage: 9169792e9eec3e45bba2a0c02f74bf8bd922d1ee
   ZIPFoundation: b1f0de4eed33e74a676f76e12559ab6b75990197
 
-PODFILE CHECKSUM: bc86b0459f27fd898a32f74b93045e004a1d8fdf
+PODFILE CHECKSUM: 10d7fbad542fce59520bf96589bcef21e8529851
 
 COCOAPODS: 1.10.0

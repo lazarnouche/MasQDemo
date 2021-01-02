@@ -10,12 +10,13 @@
 		4D7C1063259D2DFD00FE7876 /* Mask.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7C1062259D2DFD00FE7876 /* Mask.scnassets */; };
 		4D7C1068259D318200FE7876 /* MaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C1067259D318200FE7876 /* MaskExtension.swift */; };
 		4D7C113A259E66F400FE7876 /* ProfileTableViewController+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C1139259E66F400FE7876 /* ProfileTableViewController+Mask.swift */; };
+		4D7C119B259F6E8B00FE7876 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4D7C119A259F6E8B00FE7876 /* GoogleService-Info.plist */; };
+		4D7C121825A0B38300FE7876 /* DownloadService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C121725A0B38300FE7876 /* DownloadService.swift */; };
 		4D9BBE4C259D1FFE00B0CD5F /* MaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE4B259D1FFE00B0CD5F /* MaskViewController.swift */; };
 		4D9BBE6E259D21EA00B0CD5F /* MaskApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE6B259D21EA00B0CD5F /* MaskApi.swift */; };
 		4D9BBE6F259D21EA00B0CD5F /* MaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE6C259D21EA00B0CD5F /* MaskModel.swift */; };
 		4D9BBE70259D21EA00B0CD5F /* MaskRef.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE6D259D21EA00B0CD5F /* MaskRef.swift */; };
 		4D9BBE74259D250C00B0CD5F /* SignUpViewController+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE73259D250C00B0CD5F /* SignUpViewController+Mask.swift */; };
-		4DE1E7762586A49C00D9343B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4DE1E7752586A49C00D9343B /* GoogleService-Info.plist */; };
 		BD0EDC2C22128B3200841E5F /* Api.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDC2B22128B3200841E5F /* Api.swift */; };
 		BD0EDC2E22128B5200841E5F /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDC2D22128B5200841E5F /* UserApi.swift */; };
 		BD0EDC302212C24100841E5F /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EDC2F2212C24100841E5F /* StorageService.swift */; };
@@ -65,12 +66,13 @@
 		4D7C1062259D2DFD00FE7876 /* Mask.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Mask.scnassets; sourceTree = "<group>"; };
 		4D7C1067259D318200FE7876 /* MaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskExtension.swift; sourceTree = "<group>"; };
 		4D7C1139259E66F400FE7876 /* ProfileTableViewController+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileTableViewController+Mask.swift"; sourceTree = "<group>"; };
+		4D7C119A259F6E8B00FE7876 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4D7C121725A0B38300FE7876 /* DownloadService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadService.swift; sourceTree = "<group>"; };
 		4D9BBE4B259D1FFE00B0CD5F /* MaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskViewController.swift; sourceTree = "<group>"; };
 		4D9BBE6B259D21EA00B0CD5F /* MaskApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskApi.swift; sourceTree = "<group>"; };
 		4D9BBE6C259D21EA00B0CD5F /* MaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskModel.swift; sourceTree = "<group>"; };
 		4D9BBE6D259D21EA00B0CD5F /* MaskRef.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskRef.swift; sourceTree = "<group>"; };
 		4D9BBE73259D250C00B0CD5F /* SignUpViewController+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SignUpViewController+Mask.swift"; sourceTree = "<group>"; };
-		4DE1E7752586A49C00D9343B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A3F9BE78A7BDAB502ADE46EB /* Pods-MasQDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MasQDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-MasQDemo/Pods-MasQDemo.release.xcconfig"; sourceTree = "<group>"; };
 		AADA12341E337C29BD16E888 /* Pods-JChat.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JChat.release.xcconfig"; path = "Pods/Target Support Files/Pods-JChat/Pods-JChat.release.xcconfig"; sourceTree = "<group>"; };
 		BD0EDC2B22128B3200841E5F /* Api.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Api.swift; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				4D9BBE4B259D1FFE00B0CD5F /* MaskViewController.swift */,
 				4D9BBE73259D250C00B0CD5F /* SignUpViewController+Mask.swift */,
 				4D7C1139259E66F400FE7876 /* ProfileTableViewController+Mask.swift */,
+				4D7C121725A0B38300FE7876 /* DownloadService.swift */,
 			);
 			path = MasQKit;
 			sourceTree = "<group>";
@@ -204,9 +207,9 @@
 				BD53C7EE221B1D9F00BF8EA2 /* API */,
 				BD53C7EB221B1D5400BF8EA2 /* Model */,
 				BDFA347E2212D41A00094627 /* Extension.swift */,
-				4DE1E7752586A49C00D9343B /* GoogleService-Info.plist */,
 				BD3815F221E9C7A800406E46 /* Assets.xcassets */,
 				BD3815F421E9C7A800406E46 /* LaunchScreen.storyboard */,
+				4D7C119A259F6E8B00FE7876 /* GoogleService-Info.plist */,
 				BD3815F721E9C7A800406E46 /* Info.plist */,
 			);
 			path = MasQDemo;
@@ -341,9 +344,9 @@
 				BD3815F621E9C7A800406E46 /* LaunchScreen.storyboard in Resources */,
 				4D7C1063259D2DFD00FE7876 /* Mask.scnassets in Resources */,
 				BDC1B18F22462D5F009C15DC /* Card.xib in Resources */,
-				4DE1E7762586A49C00D9343B /* GoogleService-Info.plist in Resources */,
 				BD38160021E9C81800406E46 /* Welcome.storyboard in Resources */,
 				BD3815F321E9C7A800406E46 /* Assets.xcassets in Resources */,
+				4D7C119B259F6E8B00FE7876 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +451,7 @@
 				BDE931F122172FC20012A972 /* ChatViewController+Extension.swift in Sources */,
 				4D9BBE6F259D21EA00B0CD5F /* MaskModel.swift in Sources */,
 				BD38160221E9CA8700406E46 /* SignUpViewController.swift in Sources */,
+				4D7C121825A0B38300FE7876 /* DownloadService.swift in Sources */,
 				BDC1B18C22462AFB009C15DC /* RadarViewController.swift in Sources */,
 				BD0EDC342212CA3800841E5F /* MessagesTableViewController.swift in Sources */,
 				4D9BBE70259D21EA00B0CD5F /* MaskRef.swift in Sources */,
@@ -604,7 +608,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sluminal.MasQ;
+				PRODUCT_BUNDLE_IDENTIFIER = co.laurentazarnouche.masq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -625,7 +629,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.sluminal.MasQ;
+				PRODUCT_BUNDLE_IDENTIFIER = co.laurentazarnouche.masq;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
