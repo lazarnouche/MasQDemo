@@ -23,6 +23,7 @@ class NewMatchTableViewController: UITableViewController {
         
         let iconView = UIImageView(image: UIImage(named: "icon_top"))
         iconView.contentMode = .scaleAspectFit
+        iconView.isHidden = true
         navigationItem.titleView = iconView
     }
     

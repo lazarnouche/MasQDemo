@@ -41,6 +41,7 @@ class PeopleTableViewController: UITableViewController, UISearchResultsUpdating 
         
         
         let iconView = UIImageView(image: UIImage(named: "icon_top"))
+        iconView.isHidden = true
         iconView.contentMode = .scaleAspectFit
         navigationItem.titleView = iconView
         

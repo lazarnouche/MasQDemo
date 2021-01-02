@@ -8,7 +8,7 @@ import ProgressHUD
 import Firebase
 import GoogleSignIn
 
-extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
+extension ViewController: GIDSignInDelegate {
     
     func setupHeaderTitle() {
         let title = "Create a new account"
@@ -57,15 +57,20 @@ extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
     }
     
     @objc func fbButtonDidTap() {
-        let fbLoginManager = FBSDKLoginManager()
+        let fbLoginManager = LoginManager()
         fbLoginManager
-        fbLoginManager.logIn(withReadPermissions: ["public_profile", "email"], from: self) { (result, error) in
+//        fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
+//            
+//        }
+        
+        
+        fbLoginManager.logIn(permissions: ["public_profile", "email"], from: self) { (result, error) in
             if let error = error {
                 ProgressHUD.showError(error.localizedDescription)
                 return
             }
             
-            guard let accessToken = FBSDKAccessToken.current() else {
+            guard let accessToken = AccessToken.current else {
                 ProgressHUD.showError("Failed to get access token")
                 return
             }
@@ -98,7 +103,7 @@ extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
         signInGoogleButton.imageEdgeInsets = UIEdgeInsets(top: 12, left: -35, bottom: 12, right: 0)
         
         GIDSignIn.sharedInstance()?.delegate = self
-        GIDSignIn.sharedInstance()?.uiDelegate = self
+        //GIDSignIn.sharedInstance()?.uiDelegate = self
         
          signInGoogleButton.addTarget(self, action: #selector(googleButtonDidTap), for: UIControl.Event.touchUpInside)
     }

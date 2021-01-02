@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4D7C1063259D2DFD00FE7876 /* Mask.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 4D7C1062259D2DFD00FE7876 /* Mask.scnassets */; };
 		4D7C1068259D318200FE7876 /* MaskExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C1067259D318200FE7876 /* MaskExtension.swift */; };
+		4D7C113A259E66F400FE7876 /* ProfileTableViewController+Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D7C1139259E66F400FE7876 /* ProfileTableViewController+Mask.swift */; };
 		4D9BBE4C259D1FFE00B0CD5F /* MaskViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE4B259D1FFE00B0CD5F /* MaskViewController.swift */; };
 		4D9BBE6E259D21EA00B0CD5F /* MaskApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE6B259D21EA00B0CD5F /* MaskApi.swift */; };
 		4D9BBE6F259D21EA00B0CD5F /* MaskModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D9BBE6C259D21EA00B0CD5F /* MaskModel.swift */; };
@@ -63,6 +64,7 @@
 		17C1A670D92FAFE02D21FD05 /* Pods_MasQDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MasQDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D7C1062259D2DFD00FE7876 /* Mask.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Mask.scnassets; sourceTree = "<group>"; };
 		4D7C1067259D318200FE7876 /* MaskExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskExtension.swift; sourceTree = "<group>"; };
+		4D7C1139259E66F400FE7876 /* ProfileTableViewController+Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ProfileTableViewController+Mask.swift"; sourceTree = "<group>"; };
 		4D9BBE4B259D1FFE00B0CD5F /* MaskViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MaskViewController.swift; sourceTree = "<group>"; };
 		4D9BBE6B259D21EA00B0CD5F /* MaskApi.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskApi.swift; sourceTree = "<group>"; };
 		4D9BBE6C259D21EA00B0CD5F /* MaskModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MaskModel.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 				4D9BBE6D259D21EA00B0CD5F /* MaskRef.swift */,
 				4D9BBE4B259D1FFE00B0CD5F /* MaskViewController.swift */,
 				4D9BBE73259D250C00B0CD5F /* SignUpViewController+Mask.swift */,
+				4D7C1139259E66F400FE7876 /* ProfileTableViewController+Mask.swift */,
 			);
 			path = MasQKit;
 			sourceTree = "<group>";
@@ -453,6 +456,7 @@
 				BD38160421E9CA9300406E46 /* SignUpViewController+UI.swift in Sources */,
 				BDE486C2221D574F006A9AC5 /* UserAroundCollectionViewCell.swift in Sources */,
 				BD0EDC2E22128B5200841E5F /* UserApi.swift in Sources */,
+				4D7C113A259E66F400FE7876 /* ProfileTableViewController+Mask.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

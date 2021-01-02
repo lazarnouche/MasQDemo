@@ -967,6 +967,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="1" green="0.76103182449642315" blue="0.71822588044749991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="3D7-Ac-sFK" kind="relationship" relationship="viewControllers" id="JIf-gP-q5u"/>
@@ -995,15 +996,16 @@
             </objects>
             <point key="canvasLocation" x="210" y="97"/>
         </scene>
-        <!--Messages-->
+        <!--Navigation Controller-->
         <scene sceneID="rm5-NU-YoG">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="3D7-Ac-sFK" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Messages" image="icon_messages" id="cY6-eG-gSI"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_messages" id="cY6-eG-gSI"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aLY-ys-ddN">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1014,15 +1016,16 @@
             </objects>
             <point key="canvasLocation" x="1436" y="792.95352323838085"/>
         </scene>
-        <!--Users-->
+        <!--Navigation Controller-->
         <scene sceneID="nFL-y3-clf">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hnX-mD-nqi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Users" image="icon_users" id="dEJ-lh-umk"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_users" id="dEJ-lh-umk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="18K-sq-VGd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1252,7 +1255,9 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" id="qs0-bo-3Hq">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="separatorColor" red="1" green="0.76103182449642315" blue="0.71822588044749991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <view key="tableHeaderView" contentMode="scaleToFill" id="IBH-na-fEE">
                             <rect key="frame" x="0.0" y="0.0" width="375" height="150"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -1265,7 +1270,7 @@
                                     </constraints>
                                 </imageView>
                             </subviews>
-                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <constraints>
                                 <constraint firstItem="DOO-jx-tNx" firstAttribute="centerX" secondItem="IBH-na-fEE" secondAttribute="centerX" id="ScF-1c-R4O"/>
                                 <constraint firstItem="DOO-jx-tNx" firstAttribute="centerY" secondItem="IBH-na-fEE" secondAttribute="centerY" id="i6a-a1-QTp"/>
@@ -1294,6 +1299,7 @@
                                                 <constraint firstItem="n3X-yU-gEg" firstAttribute="top" secondItem="LDU-pj-0zm" secondAttribute="top" id="jTM-Kf-29X"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="50" id="0Yt-NB-BCz">
                                         <rect key="frame" x="0.0" y="218" width="375" height="50"/>
@@ -1336,6 +1342,7 @@
                                                 <constraint firstAttribute="bottom" secondItem="10v-45-lAI" secondAttribute="bottom" id="yuT-7i-27E"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -1376,6 +1383,7 @@
                                                         <segment title="Female"/>
                                                     </segments>
                                                     <color key="tintColor" red="0.36470588240000001" green="0.30980392159999998" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="selectedSegmentTintColor" red="1" green="0.76103182449642315" blue="0.71822588044749991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </segmentedControl>
                                             </subviews>
                                             <constraints>
@@ -1518,15 +1526,16 @@
             </objects>
             <point key="canvasLocation" x="2402" y="2328"/>
         </scene>
-        <!--Me-->
+        <!--Navigation Controller-->
         <scene sceneID="eAK-Ib-lq4">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IJh-u9-xf7" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Me" image="icon_profile" id="uKI-LX-kv0"/>
+                    <tabBarItem key="tabBarItem" title="" image="icon_profile" id="uKI-LX-kv0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1FN-Qf-td1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="1" green="0.76103182449642315" blue="0.71822588044749991" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1571,6 +1580,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dju-hE-ztc">
                                 <rect key="frame" x="35" y="20" width="305" height="527"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="00V-uE-58I"/>
