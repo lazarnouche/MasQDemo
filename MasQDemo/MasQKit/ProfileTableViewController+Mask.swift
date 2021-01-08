@@ -13,6 +13,7 @@ extension ProfileTableViewController{
     
     @objc func presentPicker() {
         
+        DownloadService.preparedownloadMasks()
         let storyboard =  UIStoryboard(name: "Welcome", bundle: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(updateAvatarImage(_:)), name: Notification.Name(rawValue: "updateAvatarImage"), object: nil)
@@ -27,6 +28,7 @@ extension ProfileTableViewController{
 
        
     }
-    
-    
+
+
 }
+

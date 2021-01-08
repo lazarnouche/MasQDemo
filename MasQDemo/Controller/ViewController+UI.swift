@@ -8,7 +8,7 @@ import ProgressHUD
 import Firebase
 import GoogleSignIn
 
-extension ViewController: GIDSignInDelegate {
+extension ViewController: GIDSignInDelegate, GIDSignInUIDelegate {
     
     func setupHeaderTitle() {
         let title = "Create a new account"
@@ -103,7 +103,7 @@ extension ViewController: GIDSignInDelegate {
         signInGoogleButton.imageEdgeInsets = UIEdgeInsets(top: 12, left: -35, bottom: 12, right: 0)
         
         GIDSignIn.sharedInstance()?.delegate = self
-        //GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.uiDelegate = self
         
          signInGoogleButton.addTarget(self, action: #selector(googleButtonDidTap), for: UIControl.Event.touchUpInside)
     }

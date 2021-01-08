@@ -44,7 +44,7 @@ class SignUpViewController: UIViewController {
         setupPasswordTextField()
         setupSignUpButton()
         setupSignInButton()
-        downloadMasks()
+        DownloadService.downloadMasks()
     }
     
     

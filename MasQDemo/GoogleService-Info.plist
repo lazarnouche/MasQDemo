@@ -3,23 +3,21 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>733777454200-sbkqs5lbn2c2vjbu3s6a01mshg47bt25.apps.googleusercontent.com</string>
+	<string>402658048527-b6sn1bem55qqh9m7p0acvi36f7aqnk6d.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.733777454200-sbkqs5lbn2c2vjbu3s6a01mshg47bt25</string>
-	<key>ANDROID_CLIENT_ID</key>
-	<string>733777454200-5ho1lj6nugc0eahbla2g45nn47h8dk85.apps.googleusercontent.com</string>
+	<string>com.googleusercontent.apps.402658048527-b6sn1bem55qqh9m7p0acvi36f7aqnk6d</string>
 	<key>API_KEY</key>
-	<string>AIzaSyD8xR21cYU_InQMTM1PmAbm4z5mRx8own4</string>
+	<string>AIzaSyAw36fcHo_QA6J08DsWwg-DhaM0AEm-_5k</string>
 	<key>GCM_SENDER_ID</key>
-	<string>733777454200</string>
+	<string>402658048527</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.sluminal.MasQ</string>
+	<string>co.laurentazarnouche.masq</string>
 	<key>PROJECT_ID</key>
-	<string>masq-2f3f7</string>
+	<string>masq-8445b</string>
 	<key>STORAGE_BUCKET</key>
-	<string>masq-2f3f7.appspot.com</string>
+	<string>masq-8445b.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -31,8 +29,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:733777454200:ios:51f93e3646d6bec881398d</string>
+	<string>1:402658048527:ios:b68be7ce12e4aab5bb417a</string>
 	<key>DATABASE_URL</key>
-	<string>https://masq-2f3f7.firebaseio.com</string>
+	<string>https://masq-8445b.firebaseio.com</string>
 </dict>
 </plist>
